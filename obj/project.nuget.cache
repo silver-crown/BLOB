@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "VkjSnCG5on/gRM+piI1dY82sK9f0aFY9Jk+q8JfoI5lieh5eLp9RWjpfvgy6MLUM3ZhG1KugM9S2cq+snqKmrg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\13sti\\source\\repos\\BLOB\\BLOB\\BLOB.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\13sti\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
+    "C:\\Users\\13sti\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\13sti\\.nuget\\packages\\monogame.extended\\3.9.0-alpha0107\\monogame.extended.3.9.0-alpha0107.nupkg.sha512",
+    "C:\\Users\\13sti\\.nuget\\packages\\monogame.extended.content.pipeline\\3.9.0-alpha0107\\monogame.extended.content.pipeline.3.9.0-alpha0107.nupkg.sha512",
+    "C:\\Users\\13sti\\.nuget\\packages\\monogame.extended.graphics\\3.9.0-alpha0107\\monogame.extended.graphics.3.9.0-alpha0107.nupkg.sha512",
+    "C:\\Users\\13sti\\.nuget\\packages\\monogame.extended.tiled\\3.9.0-alpha0107\\monogame.extended.tiled.3.9.0-alpha0107.nupkg.sha512",
+    "C:\\Users\\13sti\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\13sti\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

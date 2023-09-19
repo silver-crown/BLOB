@@ -1,0 +1,14 @@
+{
+  "textureAtlas": {
+    "texture": "..\\..\\..\\..\\..\\..\\UnityProjects\\Blob-RPG\\GameSprites\\Blue\\blue-slash-2h-overhead.png",
+    "regionWidth": 103,
+    "regionHeight": 70
+  },
+  "cycles": {
+    "slash": {
+      "frames": [0,1,2,3,4,5],
+      "isLooping": false,
+      "frameDuration": 0.09
+    }
+  }
+}

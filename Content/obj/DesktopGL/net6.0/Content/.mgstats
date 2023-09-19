@@ -1,0 +1,5 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/13sti/source/repos/BLOB/BLOB/Content/BLOB testMap.tmx","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/BLOB testMap.xnb","TiledMapProcessor","TiledMapContentItem",4763,5895,0.2715487
+"C:/Users/13sti/source/repos/BLOB/BLOB/Content/blueOverworld24-Sheet.png","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/blueOverworld24-Sheet.xnb","TextureProcessor","Texture2DContent",1877,27733,0.1632801
+"C:/Users/13sti/source/repos/BLOB/BLOB/Content/overworldSpriteSheet.png","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/overworldSpriteSheet_0.xnb","TextureProcessor","Texture2DContent",4119,47609,0.143982
+"C:/Users/13sti/source/repos/BLOB/BLOB/Content/overworldTileset.tsx","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/overworldTileset.xnb","TiledMapTilesetProcessor","TiledMapTilesetContentItem",251,143,0.1825776

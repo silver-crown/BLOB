@@ -1,0 +1,14 @@
+{
+  "textureAtlas": {
+    "texture": "..\\..\\..\\..\\..\\..\\UnityProjects\\Blob-RPG\\GameSprites\\Blue\\blue-slash-fronthand-Sheet.png",
+    "regionWidth": 121,
+    "regionHeight": 66
+  },
+  "cycles": {
+    "slash": {
+      "frames": [0,1,2,3,4],
+      "isLooping": false,
+      "frameDuration": 0.09
+    }
+  }
+}

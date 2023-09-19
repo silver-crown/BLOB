@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/13sti/source/repos/BLOB/BLOB/Content/overworldTileset.tsx</SourceFile>
+  <SourceTime>2023-09-19T18:17:50.5675453+02:00</SourceTime>
+  <DestFile>C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/overworldTileset.xnb</DestFile>
+  <DestTime>2023-09-19T18:18:13.8509647+02:00</DestTime>
+  <Importer>TiledMapTilesetImporter</Importer>
+  <ImporterTime>2023-09-14T19:15:36+02:00</ImporterTime>
+  <Processor>TiledMapTilesetProcessor</Processor>
+  <ProcessorTime>2023-09-14T19:15:36+02:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset>
+    <string>C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/overworldSpriteSheet_0.xnb</string>
+  </BuildAsset>
+  <BuildOutput />
+</PipelineBuildEvent>
