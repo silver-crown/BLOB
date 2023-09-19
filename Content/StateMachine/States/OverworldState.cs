@@ -1,8 +1,15 @@
-﻿using BLOB.Content.Scripts;
+﻿using BLOB;
+using BLOB.Content.Scripts;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended.Screens.Transitions;
+using MonoGame.Extended.Tiled.Renderers;
+using MonoGame.Extended.Tiled;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using MonoGame.Extended.Screens;
 
 /// <summary>
 /// The netural state of the game world, where everything moves around in the overworld
@@ -19,6 +26,8 @@ public partial class OverworldState : State
     public override IEnumerator Start() {
         Debug.WriteLine("Starting Overworld State.");
         //PlayerController.Player.GetComponent<Rigidbody2D>().useFullKinematicContacts = true;
+        //Game1.GAME._screenManager.LoadScreen(new DemoTown(Game1.GAME), new FadeTransition(Game1.GAME.GraphicsDevice, Color.Black));
+        Game1._screenManager.LoadScreen(new DemoTown(Game1.GAME), new FadeTransition(Game1.graphicsDevice.GraphicsDevice, Color.Black));
         yield return Execute().MoveNext();
     }/*
     public override IEnumerator End() {

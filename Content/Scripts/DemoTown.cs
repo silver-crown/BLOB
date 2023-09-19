@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using MonoGame.Extended.Screens;
 using MonoGame.Extended.Screens.Transitions;
 using MonoGame.Extended.Tiled;
@@ -18,13 +19,14 @@ namespace BLOB.Content.Scripts
 
         TiledMap _tiledMap;
         TiledMapRenderer _tiledMapRenderer;
-
+        private SpriteBatch _spriteBatch;
+        
         private Vector2 _position = new Vector2 (50,50);
         public DemoTown(Game1 game) : base(game) { }
 
         public override void LoadContent() {
-            _tiledMap = Content.Load<TiledMap>("BLOB testMap");
-            _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
+            _tiledMap = Game1.contentManager.Load<TiledMap>("BLOB testMap");
+            _tiledMapRenderer = new TiledMapRenderer(Game1.graphicsDevice.GraphicsDevice, _tiledMap);
         }
 
         public override void Update(GameTime gameTime) {
