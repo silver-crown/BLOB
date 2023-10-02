@@ -34,3 +34,5 @@ C:\Users\13sti\source\repos\BLOB\BLOB\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\13sti\source\repos\BLOB\BLOB\bin\Debug\net6.0\Content\GrassTile_1.xnb
 C:\Users\13sti\source\repos\BLOB\BLOB\bin\Debug\net6.0\Content\overworldTileset.xnb
 C:\Users\13sti\source\repos\BLOB\BLOB\bin\Debug\net6.0\Content\overworldSpriteSheet_0.xnb
+C:\Users\13sti\source\repos\BLOB\BLOB\bin\Debug\net6.0\Content\SpriteAnimations\blueOverworld24-Sheet.xnb
+C:\Users\13sti\source\repos\BLOB\BLOB\bin\Debug\net6.0\Content\blueOverworld24-Sheet.sf

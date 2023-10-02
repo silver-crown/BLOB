@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 public abstract class State
 {
-
+    public delegate IEnumerator CurrentNumerator();
+    public CurrentNumerator currentNumerator;
     /// <summary>
     /// Beginning the state
     /// </summary>

@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using MonoGame.Extended.Screens;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 public sealed class GameManager : StateMachine
 {
@@ -30,5 +31,10 @@ public sealed class GameManager : StateMachine
     public void Start() {
         Debug.WriteLine(" Object is not valid for this category.");
     }
+
+    public Keys keyboardUP = Keys.W;
+    public Keys keyboardDOWN = Keys.S;
+    public Keys keyboardLEFT = Keys.A;
+    public Keys keyboardRIGHT = Keys.D;
 }
 

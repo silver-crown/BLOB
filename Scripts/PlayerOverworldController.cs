@@ -1,4 +1,4 @@
-﻿using BLOB.Content.Scripts;
+﻿using BLOB.Scripts;
 using Microsoft.VisualBasic;
 using Microsoft.Xna.Framework.Input;
 using System.Collections;

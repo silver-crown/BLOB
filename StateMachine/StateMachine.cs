@@ -11,6 +11,8 @@ public abstract class StateMachine
         state = s;
         state.Start().MoveNext();
     }
+
+    //returns a copy of the state
     public State GetState(){
         State s = state;
         return s;

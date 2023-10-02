@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLOB.Content.Scripts
+namespace BLOB.Scripts
 {
     public abstract class ObjectBehavior
     {

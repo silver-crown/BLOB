@@ -7,7 +7,7 @@
   "cycles": {
     "walkDown": {
       "frames": [1,0,2,0],
-      "isLooping": true,
+      "isLooping": false,
       "frameDuration": 0.2
     },
     "walkLeft": {
@@ -22,6 +22,11 @@
     },
     "walkUp": {
       "frames": [10,9,11,9],
+      "isLooping": false,
+      "frameDuration": 0.2
+    },
+    "idle": {
+      "frames": [0],
       "isLooping": false,
       "frameDuration": 0.2
     }

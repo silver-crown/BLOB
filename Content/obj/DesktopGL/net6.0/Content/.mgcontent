@@ -2,13 +2,15 @@
 <SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Profile>Reach</Profile>
   <Platform>DesktopGL</Platform>
-  <Config />
+  <Config>Debug</Config>
   <SourceFiles>
+    <File>C:/Users/13sti/source/repos/BLOB/BLOB/Content/../SpriteAnimations/blueOverworld24-Sheet.sf</File>
     <File>C:/Users/13sti/source/repos/BLOB/BLOB/Content/BLOB testMap.tmx</File>
     <File>C:/Users/13sti/source/repos/BLOB/BLOB/Content/blueOverworld24-Sheet.png</File>
     <File>C:/Users/13sti/source/repos/BLOB/BLOB/Content/overworldTileset.tsx</File>
   </SourceFiles>
   <DestFiles>
+    <File>blueOverworld24-Sheet.sf</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
