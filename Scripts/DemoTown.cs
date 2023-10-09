@@ -17,20 +17,20 @@ using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended;
 using MonoGame.Extended.ViewportAdapters;
 using System.Xml.Linq;
+using MonoGame.Extended.Tiled.Serialization;
 
 namespace BLOB.Scripts
 {
     public class DemoTown : GameScreen
     {
         private new Game1 Game => (Game1)base.Game;
-        private OverworldPlayer _player;
         private OrthographicCamera _camera;
 
 
         TiledMap _tiledMap;
         TiledMapRenderer _tiledMapRenderer;
         private SpriteBatch _spriteBatch;
-
+        TiledMapObject _tileMapPlayer;
 
         private Vector2 _position = new Vector2(50, 50);
         public DemoTown(Game1 game) : base(game) { }
@@ -47,11 +47,21 @@ namespace BLOB.Scripts
         {
             _spriteBatch = new SpriteBatch(Game1.graphicsDevice.GraphicsDevice);
             var spriteSheet = Game1.contentManager.Load<SpriteSheet>("blueOverworld24-Sheet.sf", new JsonContentLoader());
-            _player = new OverworldPlayer(spriteSheet, new System.Numerics.Vector2(300, 300));
-
+            OverworldPlayer.PLAYER.SetSprite(spriteSheet);
 
             _tiledMap = Game1.contentManager.Load<TiledMap>("BLOB testMap");
             _tiledMapRenderer = new TiledMapRenderer(Game1.graphicsDevice.GraphicsDevice, _tiledMap);
+
+            //set start position for player
+            if (!OverworldPlayer.PLAYER.HasPlayerSpawned()) {
+                foreach (var obj in _tiledMap.ObjectLayers[0].Objects) {
+                    if (obj.Name.Equals("Player")) {
+                        OverworldPlayer.PLAYER.SetPosition(new System.Numerics.Vector2(obj.Position.X, obj.Position.Y));
+                        OverworldPlayer.PLAYER.PlayerHasSpawned();
+                        break;
+                    }
+                }
+            }
         }
 
         public override void Update(GameTime gameTime)
@@ -59,14 +69,9 @@ namespace BLOB.Scripts
             var deltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
             var walkSpeed = deltaSeconds * 128;
 
-            _player.GetSprite().Update(deltaSeconds);
+            OverworldPlayer.PLAYER.GetSprite().Update(deltaSeconds);
 
             _tiledMapRenderer.Update(gameTime);
-            if (Keyboard.GetState().IsKeyDown(GameManager.GM.keyboardUP)) _player.Walk(OverworldPlayer.Direction.UP);
-            else if (Keyboard.GetState().IsKeyDown(GameManager.GM.keyboardDOWN)) _player.Walk(OverworldPlayer.Direction.DOWN);
-            else if (Keyboard.GetState().IsKeyDown(GameManager.GM.keyboardLEFT)) _player.Walk(OverworldPlayer.Direction.LEFT);
-            else if (Keyboard.GetState().IsKeyDown(GameManager.GM.keyboardRIGHT)) _player.Walk(OverworldPlayer.Direction.RIGHT);
-
             if (Keyboard.GetState().IsKeyDown(Keys.R))
                 _camera.ZoomIn(deltaSeconds);
 
@@ -74,7 +79,7 @@ namespace BLOB.Scripts
                 _camera.ZoomOut(deltaSeconds);
 
             var offset = new Vector2 (Game1.SCREEN_WIDTH / 2, Game1.SCREEN_HEIGHT / 2);
-            _camera.Position = new Vector2(_player.GetPosition().X - (Game1.SCREEN_WIDTH/3), _player.GetPosition().Y - (Game1.SCREEN_HEIGHT/3));
+            _camera.Position = new Vector2(OverworldPlayer.PLAYER.GetPosition().X - (Game1.SCREEN_WIDTH/3), OverworldPlayer.PLAYER.GetPosition().Y - (Game1.SCREEN_HEIGHT/3));
         }
 
         public override void Draw(GameTime gameTime)
@@ -82,7 +87,7 @@ namespace BLOB.Scripts
             Game1.graphicsDevice.GraphicsDevice.SamplerStates[0] = SamplerState.PointClamp;
             var transformMatrix = _camera.GetViewMatrix();
             _tiledMapRenderer.Draw(transformMatrix); _spriteBatch.Begin(transformMatrix: transformMatrix,samplerState: SamplerState.PointClamp);
-            _spriteBatch.Draw(_player.GetSprite(), _player.GetPosition());
+            _spriteBatch.Draw(OverworldPlayer.PLAYER.GetSprite(), OverworldPlayer.PLAYER.GetPosition());
             _spriteBatch.End();
         }
     }

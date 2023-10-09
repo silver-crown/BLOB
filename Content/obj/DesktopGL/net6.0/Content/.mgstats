@@ -1,6 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/13sti/source/repos/BLOB/BLOB/Content/../SpriteAnimations/blueOverworld24-Sheet.sf","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/blueOverworld24-Sheet.xnb","SpriteFactoryContentProcessor","JsonContentProcessorResult",687,821,0.1070318
+"C:/Users/13sti/source/repos/BLOB/BLOB/Content/../SpriteAnimations/blueOverworld24-Sheet.sf","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/blueOverworld24-Sheet.xnb","SpriteFactoryContentProcessor","JsonContentProcessorResult",687,821,0.1117701
 "C:/Users/13sti/source/repos/BLOB/BLOB/Content/BLOB testMap.tmx","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/BLOB testMap.xnb","TiledMapProcessor","TiledMapContentItem",4763,5895,0.2696649
-"C:/Users/13sti/source/repos/BLOB/BLOB/Content/blueOverworld24-Sheet.png","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/blueOverworld24-Sheet.xnb","TextureProcessor","Texture2DContent",1877,27733,0.0277792
+"C:/Users/13sti/source/repos/BLOB/BLOB/Content/blueOverworld24-Sheet.png","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/blueOverworld24-Sheet.xnb","TextureProcessor","Texture2DContent",1877,27733,0.0277425
 "C:/Users/13sti/source/repos/BLOB/BLOB/Content/overworldSpriteSheet.png","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/overworldSpriteSheet_0.xnb","TextureProcessor","Texture2DContent",4119,47609,0.1508332
 "C:/Users/13sti/source/repos/BLOB/BLOB/Content/overworldTileset.tsx","C:/Users/13sti/source/repos/BLOB/BLOB/Content/bin/DesktopGL/Content/overworldTileset.xnb","TiledMapTilesetProcessor","TiledMapTilesetContentItem",251,143,0.1866238

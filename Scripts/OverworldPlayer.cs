@@ -13,6 +13,7 @@ namespace BLOB.Scripts
     {
         private PlayerOverworldController controller = new PlayerOverworldController();
         private AnimatedSprite sprite;
+        private bool playerSpawned;
         public enum Direction
         {
             UP, DOWN, LEFT, RIGHT
@@ -22,15 +23,17 @@ namespace BLOB.Scripts
         private int _HP, _MaxHP, _MP, _MaxMP, _LVL, _MaxLVL, _EXP, _MaxEXP;
         float walkspeed = 1.0f;
 
+
+        private static readonly OverworldPlayer player  = new();
+
         public OverworldPlayer(SpriteSheet s, Vector2 pos)
         {
-            sprite = new AnimatedSprite(s);
-            SetPosition(pos);
+            player.sprite = new AnimatedSprite(s);
+            player.SetPosition(pos);
         }
-        void Start()
-        {
-
-        }
+        static OverworldPlayer() { }
+        private OverworldPlayer() { }
+        public static OverworldPlayer PLAYER { get { return player; } }
 
         private void Update()
         {
@@ -63,11 +66,8 @@ namespace BLOB.Scripts
                     break;
             }
         }
-
-        public AnimatedSprite GetSprite()
-        {
-            return sprite;
-        }
+        public void SetSprite(SpriteSheet s) => player.sprite = new AnimatedSprite(s);
+        public AnimatedSprite GetSprite() => player.sprite;
         void AnimationHandler(string animation) => sprite.Play(animation);
 
         public int GetHP() => _HP;
@@ -87,5 +87,8 @@ namespace BLOB.Scripts
         private void SetMaxLVL(int lvl) => _LVL = lvl;
         public void SetEXP(int exp) => _EXP = exp;
         public void SetMaxEXP(int exp) => _MaxEXP = exp;
+
+        public void PlayerHasSpawned() => playerSpawned = true;
+        public bool HasPlayerSpawned() => playerSpawned; 
     }
 }

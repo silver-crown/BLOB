@@ -12,7 +12,7 @@ public sealed class GameManager : StateMachine
 {
 
     //non-lazy singleton pattern for the game manager
-    private static readonly GameManager gm = new GameManager();
+    private static readonly GameManager gm = new();
     private Screen _activeScreen;
 
     static GameManager() {

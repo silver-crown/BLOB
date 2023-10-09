@@ -45,9 +45,11 @@ public partial class OverworldState : State
         //player movement logic should happen here
         //pool the controls 
 
-        if (Keyboard.GetState().IsKeyDown(GameManager.GM.keyboardUP)) {
-           //Game1._screenManager.LoadScreen(new DemoTown(Game1.GAME), new FadeTransition(Game1.graphicsDevice.GraphicsDevice, Color.Black));
-        }
+        if (Keyboard.GetState().IsKeyDown(GameManager.GM.keyboardUP)) OverworldPlayer.PLAYER.Walk(OverworldPlayer.Direction.UP);
+        else if (Keyboard.GetState().IsKeyDown(GameManager.GM.keyboardDOWN)) OverworldPlayer.PLAYER.Walk(OverworldPlayer.Direction.DOWN);
+        else if (Keyboard.GetState().IsKeyDown(GameManager.GM.keyboardLEFT)) OverworldPlayer.PLAYER.Walk(OverworldPlayer.Direction.LEFT);
+        else if (Keyboard.GetState().IsKeyDown(GameManager.GM.keyboardRIGHT)) OverworldPlayer.PLAYER.Walk(OverworldPlayer.Direction.RIGHT);
+
         yield break;
     }
 }

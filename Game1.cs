@@ -18,7 +18,6 @@ namespace BLOB
         Texture2D overworldBlueTexture;
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private OverworldPlayer _player;
         public static ScreenManager _screenManager;
         public static ContentManager contentManager;
         public static GraphicsDeviceManager graphicsDevice;
@@ -63,6 +62,7 @@ namespace BLOB
 
 
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+
 
             // TODO: use this.Content to load your game content here
             //overworldBlueTexture = Content.Load<Texture2D>("blueOverworld24-Sheet");
