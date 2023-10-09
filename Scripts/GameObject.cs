@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
+using System.Drawing;
+using MonoGame.Extended.Sprites;
 
 namespace BLOB.Scripts
 {
@@ -35,7 +37,9 @@ namespace BLOB.Scripts
         //sets the gameobject to being active or not
         public void SetActive(bool a) { active = a; }
 
-        public void SetPosition(Vector2 a) => position = a;
-        public Vector2 GetPosition() => position;
+        public virtual void SetPosition(Vector2 a) => position = a;
+        public virtual Vector2 GetPosition() => position;
+
+        public virtual AnimatedSprite GetSprite() { return null; }
     }
 }

@@ -46,22 +46,13 @@ namespace BLOB.Scripts
         public override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(Game1.graphicsDevice.GraphicsDevice);
-            var spriteSheet = Game1.contentManager.Load<SpriteSheet>("blueOverworld24-Sheet.sf", new JsonContentLoader());
-            OverworldPlayer.PLAYER.SetSprite(spriteSheet);
+
+
 
             _tiledMap = Game1.contentManager.Load<TiledMap>("BLOB testMap");
             _tiledMapRenderer = new TiledMapRenderer(Game1.graphicsDevice.GraphicsDevice, _tiledMap);
 
-            //set start position for player
-            if (!OverworldPlayer.PLAYER.HasPlayerSpawned()) {
-                foreach (var obj in _tiledMap.ObjectLayers[0].Objects) {
-                    if (obj.Name.Equals("Player")) {
-                        OverworldPlayer.PLAYER.SetPosition(new System.Numerics.Vector2(obj.Position.X, obj.Position.Y));
-                        OverworldPlayer.PLAYER.PlayerHasSpawned();
-                        break;
-                    }
-                }
-            }
+            TileMapManager.TMM.LoadTileMapContents(_tiledMap);
         }
 
         public override void Update(GameTime gameTime)
@@ -87,7 +78,7 @@ namespace BLOB.Scripts
             Game1.graphicsDevice.GraphicsDevice.SamplerStates[0] = SamplerState.PointClamp;
             var transformMatrix = _camera.GetViewMatrix();
             _tiledMapRenderer.Draw(transformMatrix); _spriteBatch.Begin(transformMatrix: transformMatrix,samplerState: SamplerState.PointClamp);
-            _spriteBatch.Draw(OverworldPlayer.PLAYER.GetSprite(), OverworldPlayer.PLAYER.GetPosition());
+            TileMapManager.TMM.DrawTileMapContents(_spriteBatch, _tiledMap);
             _spriteBatch.End();
         }
     }

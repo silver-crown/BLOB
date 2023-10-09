@@ -2,6 +2,7 @@
 using MonoGame.Extended.Sprites;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -13,6 +14,7 @@ namespace BLOB.Scripts
     {
         private PlayerOverworldController controller = new PlayerOverworldController();
         private AnimatedSprite sprite;
+        private Rectangle hitbox;
         private bool playerSpawned;
         public enum Direction
         {
@@ -34,11 +36,6 @@ namespace BLOB.Scripts
         static OverworldPlayer() { }
         private OverworldPlayer() { }
         public static OverworldPlayer PLAYER { get { return player; } }
-
-        private void Update()
-        {
-            controller.GridMovement();
-        }
 
         public void Walk(Direction d)
         {
@@ -67,7 +64,7 @@ namespace BLOB.Scripts
             }
         }
         public void SetSprite(SpriteSheet s) => player.sprite = new AnimatedSprite(s);
-        public AnimatedSprite GetSprite() => player.sprite;
+        public override AnimatedSprite GetSprite() => player.sprite;
         void AnimationHandler(string animation) => sprite.Play(animation);
 
         public int GetHP() => _HP;
